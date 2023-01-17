@@ -1385,6 +1385,8 @@ MonoBehaviour:
   endPanel: {fileID: 207636265}
   timeText: {fileID: 1735750682}
   thisScoreText: {fileID: 1862941284}
+  maxScoreText: {fileID: 690538711}
+  anim: {fileID: 602228464}
 --- !u!1 &1641898111
 GameObject:
   m_ObjectHideFlags: 0
