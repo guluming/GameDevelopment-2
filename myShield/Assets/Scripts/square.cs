@@ -20,4 +20,11 @@ public class square : MonoBehaviour
     {
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "balloon") {
+            gameManager.I.gameOver();
+        }
+    }
 }
