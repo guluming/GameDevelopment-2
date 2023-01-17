@@ -673,6 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 9001424544656624578, guid: 027fb4e4b813b414ba7468ae574f5815, type: 3}
+  timeText: {fileID: 1735750682}
 --- !u!1 &1735750680
 GameObject:
   m_ObjectHideFlags: 0
