@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour
     public GameObject endPanel;
     public Text timeText;
     public Text thisScoreText;
+    public Text maxScoreText;
     float alive = 0f;
     bool isRunning = true;
 
@@ -46,6 +47,16 @@ public class gameManager : MonoBehaviour
         Time.timeScale = 0f;
         endPanel.SetActive(true);
         thisScoreText.text = alive.ToString("N2");
+
+        if (PlayerPrefs.HasKey("bestScore") == false) {
+            PlayerPrefs.SetFloat("bestScore", alive);
+        } else {
+            if (alive > PlayerPrefs.GetFloat("bestScore")) {
+                PlayerPrefs.SetFloat("bestScore", alive);
+            }
+        }
+        float maxScore = PlayerPrefs.GetFloat("bestScore");
+        maxScoreText.text = maxScore.ToString("N2");
     }
 
     public void retry() 
